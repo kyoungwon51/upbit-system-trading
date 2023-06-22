@@ -16,8 +16,12 @@ namespace upbit.View
         {
             if (sender.Equals(toolStripButton_START))
             {             
-                Console.WriteLine("시작버튼");
+                Console.WriteLine("시작버튼클릭");
                 running.Go();
+            }
+            else if (sender.Equals(toolStripButton_SelectCoin))
+            {
+
             }
         }
     }

@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using upbit.UpbitAPI;
-using upbit.Model;
 using upbit.Controller;
+using upbit.UpbitAPI;
 
 namespace upbit.View
 {
@@ -42,6 +34,7 @@ namespace upbit.View
         private void SetReceiveFunction()
         {
             toolStripButton_START.Click += ReceiveButtonEvent;
+            toolStripButton_SelectCoin.Click += ReceiveButtonEvent;
         }
 
         private void dataGridView_Account_SelectionChanged(object sender, EventArgs e)

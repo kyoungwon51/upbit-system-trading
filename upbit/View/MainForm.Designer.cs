@@ -41,6 +41,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton_START = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton_SelectCoin = new System.Windows.Forms.ToolStripButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Account)).BeginInit();
@@ -53,10 +54,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(3, 26);
+            this.tabControl1.Location = new System.Drawing.Point(3, 25);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(569, 288);
+            this.tabControl1.Size = new System.Drawing.Size(569, 289);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -65,7 +66,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(561, 258);
+            this.tabPage1.Size = new System.Drawing.Size(561, 259);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "잔고";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -88,7 +89,7 @@
             this.dataGridView_Account.Name = "dataGridView_Account";
             this.dataGridView_Account.RowTemplate.Height = 30;
             this.dataGridView_Account.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Account.Size = new System.Drawing.Size(555, 252);
+            this.dataGridView_Account.Size = new System.Drawing.Size(555, 253);
             this.dataGridView_Account.TabIndex = 0;
             this.dataGridView_Account.SelectionChanged += new System.EventHandler(this.dataGridView_Account_SelectionChanged);
             // 
@@ -127,7 +128,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(567, 267);
+            this.tabPage2.Size = new System.Drawing.Size(561, 259);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "모니터링";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -151,10 +152,11 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton_START});
+            this.toolStripButton_START,
+            this.toolStripButton_SelectCoin});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(575, 23);
+            this.toolStrip1.Size = new System.Drawing.Size(575, 22);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -164,8 +166,17 @@
             this.toolStripButton_START.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_START.Image")));
             this.toolStripButton_START.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton_START.Name = "toolStripButton_START";
-            this.toolStripButton_START.Size = new System.Drawing.Size(23, 20);
+            this.toolStripButton_START.Size = new System.Drawing.Size(23, 19);
             this.toolStripButton_START.Text = "START";
+            // 
+            // toolStripButton_SelectCoin
+            // 
+            this.toolStripButton_SelectCoin.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton_SelectCoin.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_SelectCoin.Image")));
+            this.toolStripButton_SelectCoin.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_SelectCoin.Name = "toolStripButton_SelectCoin";
+            this.toolStripButton_SelectCoin.Size = new System.Drawing.Size(23, 19);
+            this.toolStripButton_SelectCoin.Text = "코인 선택하기";
             // 
             // MainForm
             // 
@@ -202,5 +213,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton_START;
+        private System.Windows.Forms.ToolStripButton toolStripButton_SelectCoin;
     }
 }

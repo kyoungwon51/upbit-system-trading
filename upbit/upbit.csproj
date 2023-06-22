@@ -118,6 +118,12 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\MainFormButton.cs" />
+    <Compile Include="View\SelectCoinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SelectCoinForm.Designer.cs">
+      <DependentUpon>SelectCoinForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SelectCoinForm.resx">
+      <DependentUpon>SelectCoinForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
