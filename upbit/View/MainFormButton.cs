@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace upbit.View
 {
@@ -12,6 +13,7 @@ namespace upbit.View
 
     public partial class MainForm
     {
+        private SelectCoinForm selectCoinForm;
         private void ReceiveButtonEvent(object sender, EventArgs e)
         {
             if (sender.Equals(toolStripButton_START))
@@ -21,7 +23,14 @@ namespace upbit.View
             }
             else if (sender.Equals(toolStripButton_SelectCoin))
             {
+                if (selectCoinForm != null) { return; }
+                selectCoinForm = new SelectCoinForm(this.api);
+                selectCoinForm.FormClosing += ReceiveFormClosingEvent;
 
+                selectCoinForm.StartPosition = FormStartPosition.Manual;
+                selectCoinForm.Owner = this;
+                selectCoinForm.Location = this.Location;
+                selectCoinForm.Show();
             }
         }
     }

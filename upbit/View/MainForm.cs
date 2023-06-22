@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using upbit.Controller;
-using upbit.UpbitAPI;
+using upbit.UpbitAPI; 
 
 namespace upbit.View
 {
@@ -13,6 +13,7 @@ namespace upbit.View
         {
             InitializeComponent();
             this.api = api;
+            this.FormClosing += ReceiveFormClosingEvent;
             this.running = new Running(api);
             InitDataGridView();
             SetReceiveFunction();
@@ -28,6 +29,24 @@ namespace upbit.View
             foreach (DataGridViewColumn col in grid.Columns)
             {
                 col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+        }
+
+        private void ReceiveFormClosingEvent(object sender, FormClosingEventArgs e)
+        {
+            if (sender.Equals(this))
+            {
+                running.stop();
+
+                if (selectCoinForm != null)
+                {
+                    selectCoinForm.Close();
+                    selectCoinForm = null;
+                }
+            }
+            else if (sender.Equals(selectCoinForm))
+            {
+                selectCoinForm = null;
             }
         }
 

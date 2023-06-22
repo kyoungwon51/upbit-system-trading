@@ -23,6 +23,12 @@ namespace upbit.Controller
         {
             this.mainTimer.Start();
         }
+
+        public void stop()
+        {
+            this.mainTimer.Stop();
+        }
+
         private void ElapsedEventReceiver(object sender, System.Timers.ElapsedEventArgs e)
         {
             if (sender.Equals(this.mainTimer))
